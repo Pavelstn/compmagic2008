@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <link rel="stylesheet" href="fmdoc.css" type="text/css">
+  <meta name="generator" content="FreeMarker-based XDocBook Stylesheet">
+  <title>FreeMarker Manual - Shared variables</title>
+</head>
+<body>
+
+<table class="navigation" cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#E0E0E0">
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+    <tr>
+        <td align="left" valign="middle">
+            <table cellspacing="0" cellpadding="4" width="100%" border="0" bgcolor="#E0E0E0">
+                <tr>
+                    <td align="left"><a accesskey="p" href="pgui_config_basics.html"><img border="0" hspace="0" vspace="0" alt="Prev" src="images/nav/prev.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="u" href="pgui_config.html"><img border="0" hspace="0" vspace="0" alt="Up" src="images/nav/up.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="n" href="pgui_config_settings.html"><img border="0" hspace="0" vspace="0" alt="Next" src="images/nav/next.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+                    <td align="right" valign="middle">
+                        <span style="font-size: 16px; font-family: Arial, sans-serif">Bookmarks:
+                        <a accesskey="h" href="index.html">Full ToC</a>, <a accesskey="i" href="alphaidx.html">Index</a>,
+                        <a accesskey="g" href="gloss.html">Glossary</a>,
+                        <a href="ref.html">Reference</a>,
+                        <a href="app_faq.html">FAQ</a>
+                        | External:
+                        <a href="api/index.html">API</a>,
+                        <a href="../index.html">Home</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+</table><div id="mainContent">
+<div class="sect1">
+
+
+
+
+
+<div class="titlepage">
+   <div>
+     <h2><a name="pgui_config_sharedvariables"></a>Shared variables</h2>
+   </div>
+</div>        
+
+
+
+
+
+
+<p><b>Shared variables</b> are variables that are defined for all templates. You can add shared variables to the configuration with the <tt style="color: #A03D10">setSharedVariable</tt> methods:</p>
+
+<div align="left"><table bgcolor="#F8F8F8" cellspacing="0" cellpadding="0" border="0"><tr valign="top"><td height="1" width="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"/></td><td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"/></td><td height="1" width="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"/></td></tr><tr><td width="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"/></td><td><table bgcolor="#F8F8F8" cellspacing="0" cellpadding="4" border="0" width="100%" style="margin: 0px"><tr><td><pre style="margin: 0px">
+Configuration cfg = new Configuration();
+<i>...</i>
+cfg.setSharedVariable(&quot;wrap&quot;, new WrapDirective());
+cfg.setSharedVariable(&quot;company&quot;, &quot;Foo Inc.&quot;);  // Using ObjectWrapper.DEFAULT_WRAPPER&nbsp;<span style="font-size: 1pt"> </span></pre></td></tr></table></td><td width="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"/></td></tr><tr valign="top"><td height="1" width="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"/></td><td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"/></td><td height="1" width="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"/></td>      </tr>
+</table>  </div>
+
+
+<p>In all templates that use this configuration, an user-defined directive with name <tt style="color: #A03D10">wrap</tt> and a string with name <tt style="color: #A03D10">company</tt> will be visible in the data-model root, so you don't have to add them to the root hash again and again. A variable in the root object that you pass to the <tt style="color: #A03D10">Template.process</tt> will hide the shared variable with the same name.</p>
+
+<div class="warning" style="margin-left: 0.5in; margin-right: 0.5in;">
+<h3>Warning!</h3>
+<p>Never use <tt style="color: #A03D10">TemplateModel</tt> implementation that is not <a href="gloss.html#gloss.threadSafe">thread-safe</a> for shared variables, if the configuration is used by multiple threads! This is the typical situation for Servlet based Web sites.</p></div>            
+
+
+<p>Due to backward compatiblity heritage, the set of shared variables is initially (i.e., for a new <tt style="color: #A03D10">Configuration</tt> instance) not empty. It contains the following user-defined directives (they are &quot;user-defined&quot; in the sense that you use <tt style="color: #A03D10">@</tt> to call them instead of <tt style="color: #A03D10">#</tt>):</p>
+
+   <div class="informaltable">
+      <table border="1" cellpadding="4">
+
+  
+       <thead>
+        <tr>
+        <th align="left">name</th>
+
+        <th align="left">class</th>
+
+      </tr>  
+
+    </thead>
+
+      <tbody>
+        <tr>
+        <td align="left"><tt style="color: #A03D10">capture_output</tt></td>
+
+        <td align="left"><tt style="color: #A03D10">freemarker.template.utility.CaptureOutput</tt></td>
+
+      </tr>  
+
+        <tr>
+        <td align="left"><tt style="color: #A03D10">compress</tt></td>
+
+        <td align="left"><tt style="color: #A03D10">freemarker.template.utility.StandardCompress</tt></td>
+
+      </tr>  
+
+        <tr>
+        <td align="left"><tt style="color: #A03D10">html_escape</tt></td>
+
+        <td align="left"><tt style="color: #A03D10">freemarker.template.utility.HtmlEscape</tt></td>
+
+      </tr>  
+
+        <tr>
+        <td align="left"><tt style="color: #A03D10">normalize_newlines</tt></td>
+
+        <td align="left"><tt style="color: #A03D10">freemarker.template.utility.NormalizeNewlines</tt></td>
+
+      </tr>  
+
+        <tr>
+        <td align="left"><tt style="color: #A03D10">xml_escape</tt></td>
+
+        <td align="left"><tt style="color: #A03D10">freemarker.template.utility.XmlEscape</tt></td>
+
+      </tr>  
+
+    </tbody>
+
+  
+      </table>
+   </div>
+
+
+</div>
+
+</div>
+<br>
+
+<table class="navigation" cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#E0E0E0">
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+    <tr>
+        <td align="left" valign="middle">
+            <table cellspacing="0" cellpadding="4" width="100%" border="0" bgcolor="#E0E0E0">
+                <tr>
+                    <td align="left"><a accesskey="p" href="pgui_config_basics.html"><img border="0" hspace="0" vspace="0" alt="Prev" src="images/nav/prev.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="u" href="pgui_config.html"><img border="0" hspace="0" vspace="0" alt="Up" src="images/nav/up.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="n" href="pgui_config_settings.html"><img border="0" hspace="0" vspace="0" alt="Next" src="images/nav/next.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+                    <td align="right" valign="middle">
+                        <span style="font-size: 16px; font-family: Arial, sans-serif">Bookmarks:
+                        <a accesskey="h" href="index.html">Full ToC</a>, <a accesskey="i" href="alphaidx.html">Index</a>,
+                        <a accesskey="g" href="gloss.html">Glossary</a>,
+                        <a href="ref.html">Reference</a>,
+                        <a href="app_faq.html">FAQ</a>
+                        | External:
+                        <a href="api/index.html">API</a>,
+                        <a href="../index.html">Home</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+</table><table border=0 cellspacing=0 cellpadding=0 width="100%">
+  <tr>
+    <td colspan=2><img src="images/none.gif" width=1 height=4 alt=""></td>
+  <tr>
+    <td align="left" valign="top"><span class="footnote">
+        Page generated: 2008-12-16 13:58:40 GMT
+    </span></td>
+    <td align="right" valign="top"><span class="footnote">
+        FreeMarker Manual -- 
+    For FreeMarker 2.3.15
+  
+    </span></td>
+  </tr>
+</table>
+</body>
+</html>
+

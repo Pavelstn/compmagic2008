@@ -1,0 +1,30 @@
+html, body {    height: 100%; min-height: 100%; min-width: 100%; margin: 0; padding: 0; width: 100%;}
+* html, * body { /* IE */ height: 100%;width: 100%;}
+.page-wrapper {min-height: 100%; height: 100%;min-width: 100%;width: 100%;}
+
+html>body .page-wrapper {height: 100%;}
+.page-container {height: 100%;min-height: 100%;position: relative;width: 100%;}
+.page-header {width: 100%;}
+.page-header .content {width: 100%;margin: 0 auto; }
+.page-body {margin: 0px;padding: 0px; }
+.page-body .content {display: block;width: 100%;height: auto; padding: 0px;margin: 0 auto; visibility: visible;overflow: hidden;}
+.line {float: left;width: 100%;display: block;position: relative;}
+.item {position: relative;float: left;left: 100%;} 
+#leftside {margin-left: -100%;width: 20%; padding-left: 2px;}
+#centerside {margin-left: -80%;width: 60%;}
+#rightside{margin-left: -20%;width: 20%;padding-right: 10px;}
+.footer-wrapper {position: relative;width: 100%;margin: 0px;}
+.footer-holder {display: block;width: 100%;position: absolute;}
+.footer-holder .content {width: 100%;margin: 0 auto;}
+.page-header .content { min-height: 48px;height: 48px;}
+html>body .page-wrapper .page-header .content {height: auto;}
+html>body .page-wrapper .page-container {height: auto;}
+.page-body {margin-top: 0px;padding-bottom: 110px;}
+.footer-wrapper {margin-top: -110px;}
+.footer-container { min-height: 110px;height: 110px;  }
+.footer-holder .content {height: 110px;min-height: 110px;  color: #ffffff; text-align: center;}
+html>body .footer-wrapper .footer-container {height: auto;}
+.footer-holder {height: 110px;}
+
+/*.link{font-size: 1em;color: #ffffff;padding-left: 20px;padding-right: 30px; text-decoration:none;}*/
+.link:hover {color: #00ff33;}

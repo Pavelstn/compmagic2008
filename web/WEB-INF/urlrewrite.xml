@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN"
+        "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+<urlrewrite>
+<!---     <rule enabled="false">
+        <from>^/pages/(.*)$</from>
+        <to>/index.jsp?page="$1"</to>
+    </rule>
+
+<rule>
+        <from>^/(.*)$</from>
+        <to>/index.jsp?page=$1</to>
+    </rule>
+
+    <rule>
+        <from enabled="false">^/(.*)$</from>
+        <to>/action?page=$1</to>
+    </rule>
+ 
+
+     -->
+<!---    <rule>
+        <from>^/([a-z]+.html)$
+        </from>
+        <to>/action?page=$1</to>
+    </rule>
+
+    <rule>
+        <from>^/([a-z]+)/([a-z]+.html)$</from>
+        <to>/action?page=$1&amp;type=$2</to>
+    </rule>
+    -->
+    <rule>
+        <from>^/([a-z]+)/([0-9]+.html)$</from>
+        <to>/servlet/action?q=$1&amp;page=$2</to>
+    </rule>
+
+    <rule>
+        <from>^/$</from>
+        <to>/servlet/start</to>
+    </rule>
+
+    <rule>
+        <from>^/login*$</from>
+        <to>/servlet/login</to>
+    </rule>
+
+    <rule>
+        <from>^/admin/*$</from>
+        <to>/servlet/admin?mode=admin</to>
+    </rule>
+
+
+    <rule>
+        <from>^/admin/([a-z]+)/([a-z]+)/([a-z]+)$</from>
+        <to>/servlet/admin?mode=$1&amp;action=$2&amp;id=$3</to>
+    </rule>
+
+    <rule>
+        <from>^/admin/([a-z]+)/([a-z]+)$</from>
+        <to>/servlet/admin?mode=$1&amp;action=$2</to>
+    </rule>
+
+    <rule>
+        <from>^/admin/([a-z]+)$</from>
+        <to>/servlet/admin?mode=$1</to>
+    </rule>
+
+
+</urlrewrite>
+

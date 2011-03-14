@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <link rel="stylesheet" href="fmdoc.css" type="text/css">
+  <meta name="generator" content="FreeMarker-based XDocBook Stylesheet">
+  <title>FreeMarker Manual - local</title>
+</head>
+<body>
+
+<table class="navigation" cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#E0E0E0">
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+    <tr>
+        <td align="left" valign="middle">
+            <table cellspacing="0" cellpadding="4" width="100%" border="0" bgcolor="#E0E0E0">
+                <tr>
+                    <td align="left"><a accesskey="p" href="ref_directive_global.html"><img border="0" hspace="0" vspace="0" alt="Prev" src="images/nav/prev.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="u" href="ref_directives.html"><img border="0" hspace="0" vspace="0" alt="Up" src="images/nav/up.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="n" href="ref_directive_setting.html"><img border="0" hspace="0" vspace="0" alt="Next" src="images/nav/next.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+                    <td align="right" valign="middle">
+                        <span style="font-size: 16px; font-family: Arial, sans-serif">Bookmarks:
+                        <a accesskey="h" href="index.html">Full ToC</a>, <a accesskey="i" href="alphaidx.html">Index</a>,
+                        <a accesskey="g" href="gloss.html">Glossary</a>,
+                        <a href="ref.html">Reference</a>,
+                        <a href="app_faq.html">FAQ</a>
+                        | External:
+                        <a href="api/index.html">API</a>,
+                        <a href="../index.html">Home</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+</table><div id="mainContent">
+<div class="sect1">
+
+
+
+
+
+<div class="titlepage">
+   <div>
+     <h2><a name="ref_directive_local"></a>local</h2>
+   </div>
+</div>        
+
+
+
+
+<a name="ref.directive.local"></a>
+
+
+
+
+<div class="titlepage">
+   <div>
+     <h3><a name="autoid_98"></a>Synopsis</h3>
+   </div>
+</div>        
+
+
+<pre class="metaTemplate">
+<tt style="color: #A03D10">&lt;#local <i style="color: #DD4400 ">name</i>=<i style="color: #DD4400 ">value</i>&gt;</tt>
+or
+<tt style="color: #A03D10">&lt;#local <i style="color: #DD4400 ">name1</i>=<i style="color: #DD4400 ">value1</i> <i style="color: #DD4400 ">name2</i>=<i style="color: #DD4400 ">value2</i> <i style="color: #DD4400 ">... nameN</i>=<i style="color: #DD4400 ">valueN</i>&gt;</tt>
+or
+<tt style="color: #A03D10">&lt;#local <i style="color: #DD4400 ">name</i>&gt;
+  <i style="color: #DD4400 ">capture this</i>
+&lt;/#local&gt;
+</tt>
+</pre>
+
+
+<p>Where:</p>
+    <div class="itemizedlist">
+<ul>
+  <li><tt style="color: #A03D10"><i style="color: #DD4400 ">name</i></tt>: the name of the local object in the root. It is not an expression. However, it can be written as a string literal, which is useful if the variable name contains reserved characters, for example <tt style="color: #A03D10">&lt;#local &quot;foo-bar&quot; = 1&gt;</tt>. Note that this string literal does not expand interpolations (as <tt style="color: #A03D10">&quot;${foo}&quot;</tt>).</li>
+  <li><tt style="color: #A03D10"><i style="color: #DD4400 ">value</i></tt>: the value to store. Expression.</li>
+</ul>    </div>
+
+
+
+
+
+
+<div class="titlepage">
+   <div>
+     <h3><a name="autoid_99"></a>Description</h3>
+   </div>
+</div>        
+
+
+<p>It is similar to <a href="ref_directive_assign.html#ref.directive.assign">assign directive</a>, but it creates or replaces local variables. This only works inside macro definitions and function definitons.</p>
+
+<p>For more information about variables, read this: <a href="dgui_misc_var.html">Template Author's Guide/Miscellaneous/Defining variables in the template</a></p>
+
+
+
+</div>
+
+</div>
+<br>
+
+<table class="navigation" cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#E0E0E0">
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+    <tr>
+        <td align="left" valign="middle">
+            <table cellspacing="0" cellpadding="4" width="100%" border="0" bgcolor="#E0E0E0">
+                <tr>
+                    <td align="left"><a accesskey="p" href="ref_directive_global.html"><img border="0" hspace="0" vspace="0" alt="Prev" src="images/nav/prev.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="u" href="ref_directives.html"><img border="0" hspace="0" vspace="0" alt="Up" src="images/nav/up.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="n" href="ref_directive_setting.html"><img border="0" hspace="0" vspace="0" alt="Next" src="images/nav/next.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+                    <td align="right" valign="middle">
+                        <span style="font-size: 16px; font-family: Arial, sans-serif">Bookmarks:
+                        <a accesskey="h" href="index.html">Full ToC</a>, <a accesskey="i" href="alphaidx.html">Index</a>,
+                        <a accesskey="g" href="gloss.html">Glossary</a>,
+                        <a href="ref.html">Reference</a>,
+                        <a href="app_faq.html">FAQ</a>
+                        | External:
+                        <a href="api/index.html">API</a>,
+                        <a href="../index.html">Home</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+</table><table border=0 cellspacing=0 cellpadding=0 width="100%">
+  <tr>
+    <td colspan=2><img src="images/none.gif" width=1 height=4 alt=""></td>
+  <tr>
+    <td align="left" valign="top"><span class="footnote">
+        Page generated: 2008-12-16 13:58:40 GMT
+    </span></td>
+    <td align="right" valign="top"><span class="footnote">
+        FreeMarker Manual -- 
+    For FreeMarker 2.3.15
+  
+    </span></td>
+  </tr>
+</table>
+</body>
+</html>
+

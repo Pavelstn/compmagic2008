@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <link rel="stylesheet" href="fmdoc.css" type="text/css">
+  <meta name="generator" content="FreeMarker-based XDocBook Stylesheet">
+  <title>FreeMarker Manual - Built-in Reference</title>
+</head>
+<body>
+
+<table class="navigation" cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#E0E0E0">
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+    <tr>
+        <td align="left" valign="middle">
+            <table cellspacing="0" cellpadding="4" width="100%" border="0" bgcolor="#E0E0E0">
+                <tr>
+                    <td align="left"><a accesskey="p" href="ref.html"><img border="0" hspace="0" vspace="0" alt="Prev" src="images/nav/prev.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="u" href="ref.html"><img border="0" hspace="0" vspace="0" alt="Up" src="images/nav/up.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="n" href="ref_builtins_string.html"><img border="0" hspace="0" vspace="0" alt="Next" src="images/nav/next.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+                    <td align="right" valign="middle">
+                        <span style="font-size: 16px; font-family: Arial, sans-serif">Bookmarks:
+                        <a accesskey="h" href="index.html">Full ToC</a>, <a accesskey="i" href="alphaidx.html">Index</a>,
+                        <a accesskey="g" href="gloss.html">Glossary</a>,
+                        <a href="ref.html">Reference</a>,
+                        <a href="app_faq.html">FAQ</a>
+                        | External:
+                        <a href="api/index.html">API</a>,
+                        <a href="../index.html">Home</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+</table><div id="mainContent">
+  <div class="chapter">
+<div class="titlepage">
+   <div>
+     <h2><a name="ref_builtins"></a>Chapter 1.  Built-in Reference</h2>
+   </div>
+</div>        
+  
+  <div class="toc">
+    <p><b>Chapter Contents</b></p>
+    <dl>
+         <dt><a href="ref_builtins_string.html">Built-ins for strings</a></dt>       
+         <dt><a href="ref_builtins_number.html">Built-ins for numbers</a></dt>       
+         <dt><a href="ref_builtins_date.html">Built-ins for dates</a></dt>       
+         <dt><a href="ref_builtins_boolean.html">Built-ins for booleans</a></dt>       
+         <dt><a href="ref_builtins_sequence.html">Built-ins for sequences</a></dt>       
+         <dt><a href="ref_builtins_hash.html">Built-ins for hashes</a></dt>       
+         <dt><a href="ref_builtins_node.html">Built-ins for nodes (for XML)</a></dt>       
+         <dt><a href="ref_builtins_expert.html">Seldom used and expert built-ins</a></dt>       
+    </dl>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+<p>Alphabetical index of built-ins:</p>
+    <div class="itemizedlist">
+<ul>
+  <li><a href="ref_builtins_node.html#ref_builtin_ancestors">ancestors</a></li>
+  <li><a href="ref_builtins_expert.html#ref_builtin_numType">byte</a></li>
+  <li><a href="ref_builtins_number.html#ref_builtin_c">c</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_cap_first">cap_first</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_capitalize">capitalize</a></li>
+  <li><a href="ref_builtins_number.html#ref_builtin_rounding">ceiling</a></li>
+  <li><a href="ref_builtins_node.html#ref_builtin_children">children</a></li>  
+  <li><a href="ref_builtins_string.html#ref_builtin_chop_linebreak">chop_linebreak</a></li>
+  <li><a href="ref_builtins_sequence.html#ref_builtin_chunk">chunk</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_contains">contains</a></li>
+  <li>date <a href="ref_builtins_date.html#ref_builtin_date_datetype">for dates</a>, <a href="ref_builtins_string.html#ref_builtin_string_date">for strings</a></li>
+  <li>datetime <a href="ref_builtins_date.html#ref_builtin_date_datetype">for dates</a>, <a href="ref_builtins_string.html#ref_builtin_string_date">for strings</a></li>
+  <li><a href="ref_builtins_expert.html#ref_builtin_numType">double</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_ends_with">ends_with</a></li>
+  <li><a href="ref_builtins_expert.html#ref_builtin_eval">eval</a></li>
+  <li><a href="ref_builtins_sequence.html#ref_builtin_first">first</a></li>
+  <li><a href="ref_builtins_number.html#ref_builtin_rounding">floor</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_groups">groups</a></li>
+  <li><a href="ref_builtins_expert.html#ref_builtin_numType">float</a></li>
+  <li><a href="ref_builtins_expert.html#ref_builtin_has_content">has_content</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_html">html</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_index_of">index_of</a></li>
+  <li><a href="ref_builtins_expert.html#ref_builtin_numType">int</a></li>
+  <li><a href="ref_builtins_expert.html#ref_builtin_interpret">interpret</a></li>
+  <li><a href="ref_builtins_expert.html#ref_builtin_isType">is_...</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_j_string">j_string</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_js_string">js_string</a></li>
+  <li><a href="ref_builtins_hash.html#ref_builtin_keys">keys</a></li>
+  <li><a href="ref_builtins_sequence.html#ref_builtin_last">last</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_last_index_of">last_index_of</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_left_pad">left_pad</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_length">length</a></li>
+  <li><a href="ref_builtins_expert.html#ref_builtin_numType">long</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_lower_case">lower_case</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_matches">matches</a></li>
+  <li><a href="ref_builtins_expert.html#ref_builtin_namespace">namespace</a></li>
+  <li><a href="ref_builtins_expert.html#ref_builtin_new">new</a></li>
+  <li><a href="ref_builtins_node.html#ref_builtin_node_namespace">node_namespace</a></li>
+  <li><a href="ref_builtins_node.html#ref_builtin_node_name">node_name</a></li>
+  <li><a href="ref_builtins_node.html#ref_builtin_node_type">node_type</a></li>  
+  <li><a href="ref_builtins_string.html#ref_builtin_number">number</a></li>
+  <li><a href="ref_builtins_node.html#ref_builtin_parent">parent</a></li>  
+  <li><a href="ref_builtins_string.html#ref_builtin_replace">replace</a></li>
+  <li><a href="ref_builtins_sequence.html#ref_builtin_reverse">reverse</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_right_pad">right_pad</a></li>
+  <li><a href="ref_builtins_number.html#ref_builtin_rounding">round</a></li>
+  <li><a href="ref_builtins_node.html#ref_builtin_root">root</a></li>  
+  <li><a href="ref_builtins_string.html#ref_builtin_rtf">rtf</a></li>
+  <li><a href="ref_builtins_expert.html#ref_builtin_numType">short</a></li>
+  <li><a href="ref_builtins_sequence.html#ref_builtin_size">size</a></li>
+  <li><a href="ref_builtins_sequence.html#ref_builtin_sort">sort</a></li>
+  <li><a href="ref_builtins_sequence.html#ref_builtin_seq_contains">seq_contains</a></li>
+  <li><a href="ref_builtins_sequence.html#ref_builtin_seq_index_of">seq_index_of</a></li>
+  <li><a href="ref_builtins_sequence.html#ref_builtin_seq_last_index_of">seq_last_index_of</a></li>
+  <li><a href="ref_builtins_sequence.html#ref_builtin_sort_by">sort_by</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_split">split</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_starts_with">starts_with</a></li>
+  <li>string: <a href="ref_builtins_string.html#ref_builtin_string_for_string">for strings</a>, <a href="ref_builtins_number.html#ref_builtin_string_for_number">for numbers</a>, <a href="ref_builtins_boolean.html#ref_builtin_string_for_boolean">for booleans</a>, <a href="ref_builtins_date.html#ref_builtin_string_for_date">for date/times</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_substring">substring</a></li>
+  <li>time <a href="ref_builtins_date.html#ref_builtin_date_datetype">for dates</a>, <a href="ref_builtins_string.html#ref_builtin_string_date">for strings</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_trim">trim</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_uncap_first">uncap_first</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_upper_case">upper_case</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_url">url</a></li>
+  <li><a href="ref_builtins_hash.html#ref_builtin_values">values</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_word_list">word_list</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_xhtml">xhtml</a></li>
+  <li><a href="ref_builtins_string.html#ref_builtin_xml">xml</a></li>
+</ul>    </div>
+
+
+<p>If you don't find a built-in here that you have seen in a working template, probably you will find it here: <a href="ref_deprecated.html">References/Deprecated FTL constructs</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  </div>
+
+</div>
+<br>
+
+<table class="navigation" cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#E0E0E0">
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+    <tr>
+        <td align="left" valign="middle">
+            <table cellspacing="0" cellpadding="4" width="100%" border="0" bgcolor="#E0E0E0">
+                <tr>
+                    <td align="left"><a accesskey="p" href="ref.html"><img border="0" hspace="0" vspace="0" alt="Prev" src="images/nav/prev.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="u" href="ref.html"><img border="0" hspace="0" vspace="0" alt="Up" src="images/nav/up.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="n" href="ref_builtins_string.html"><img border="0" hspace="0" vspace="0" alt="Next" src="images/nav/next.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+                    <td align="right" valign="middle">
+                        <span style="font-size: 16px; font-family: Arial, sans-serif">Bookmarks:
+                        <a accesskey="h" href="index.html">Full ToC</a>, <a accesskey="i" href="alphaidx.html">Index</a>,
+                        <a accesskey="g" href="gloss.html">Glossary</a>,
+                        <a href="ref.html">Reference</a>,
+                        <a href="app_faq.html">FAQ</a>
+                        | External:
+                        <a href="api/index.html">API</a>,
+                        <a href="../index.html">Home</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+</table><table border=0 cellspacing=0 cellpadding=0 width="100%">
+  <tr>
+    <td colspan=2><img src="images/none.gif" width=1 height=4 alt=""></td>
+  <tr>
+    <td align="left" valign="top"><span class="footnote">
+        Page generated: 2008-12-16 13:58:40 GMT
+    </span></td>
+    <td align="right" valign="top"><span class="footnote">
+        FreeMarker Manual -- 
+    For FreeMarker 2.3.15
+  
+    </span></td>
+  </tr>
+</table>
+</body>
+</html>

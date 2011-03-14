@@ -1,0 +1,178 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <link rel="stylesheet" href="fmdoc.css" type="text/css">
+  <meta name="generator" content="FreeMarker-based XDocBook Stylesheet">
+  <title>FreeMarker Manual</title>
+</head>
+<body>
+
+<table class="navigation" cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#E0E0E0">
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+    <tr>
+        <td align="left" valign="middle">
+            <table cellspacing="0" cellpadding="4" width="100%" border="0" bgcolor="#E0E0E0">
+                <tr>
+                    <td align="left"><img border="0" hspace="0" vspace="0" alt="Prev" src="images/nav/prev_disabled.gif"><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><img border="0" hspace="0" vspace="0" alt="Up" src="images/nav/up_disabled.gif"><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="n" href="preface.html"><img border="0" hspace="0" vspace="0" alt="Next" src="images/nav/next.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+                    <td align="right" valign="middle">
+                        <span style="font-size: 16px; font-family: Arial, sans-serif">Bookmarks:
+                        <a accesskey="h" href="index.html">Full ToC</a>, <a accesskey="i" href="alphaidx.html">Index</a>,
+                        <a accesskey="g" href="gloss.html">Glossary</a>,
+                        <a href="ref.html">Reference</a>,
+                        <a href="app_faq.html">FAQ</a>
+                        | External:
+                        <a href="api/index.html">API</a>,
+                        <a href="../index.html">Home</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+</table><div id="mainContent">
+<div class="book">
+
+<h1>FreeMarker Manual<br><span style="font-size: 50%">
+    For FreeMarker 2.3.15
+  </span></h1>
+
+ <div class="toc">
+ 
+  <p><b>Table of Contents</b></p>
+  <dl>
+   <dt><a href="preface.html">Preface</a>
+   <dd>
+  
+   <dt>I.
+   <a href="dgui.html">Template Author's Guide</a>
+   <dd><dl>
+<dt>1.    <a href="dgui_quickstart.html">Getting Started</a></dt>
+    <dd><dl>
+<dt><a href="dgui_quickstart_basics.html">Template + data-model = output</a></dt><dt><a href="dgui_quickstart_datamodel.html">The data-model at a glance</a></dt><dt><a href="dgui_quickstart_template.html">The template at a glance</a></dt>    </dl></dd>
+<dt>2.    <a href="dgui_datamodel.html">Values, Types</a></dt>
+    <dd><dl>
+<dt><a href="dgui_datamodel_basics.html">Basics</a></dt><dt><a href="dgui_datamodel_types.html">The types</a></dt>    </dl></dd>
+<dt>3.    <a href="dgui_template.html">The Template</a></dt>
+    <dd><dl>
+<dt><a href="dgui_template_overallstructure.html">Overall structure</a></dt><dt><a href="dgui_template_directives.html">Directives</a></dt><dt><a href="dgui_template_exp.html">Expressions</a></dt><dt><a href="dgui_template_valueinsertion.html">Interpolations</a></dt>    </dl></dd>
+<dt>4.    <a href="dgui_misc.html">Miscellaneous</a></dt>
+    <dd><dl>
+<dt><a href="dgui_misc_userdefdir.html">Defining your own directives</a></dt><dt><a href="dgui_misc_var.html">Defining variables in the template</a></dt><dt><a href="dgui_misc_namespace.html">Namespaces</a></dt><dt><a href="dgui_misc_whitespace.html">White-space handling</a></dt><dt><a href="dgui_misc_alternativesyntax.html">Alternative (square bracket) syntax</a></dt>    </dl></dd>
+   </dl></dd>
+   <dt>II.
+   <a href="pgui.html">Programmer's Guide</a>
+   <dd><dl>
+<dt>1.    <a href="pgui_quickstart.html">Getting Started</a></dt>
+    <dd><dl>
+<dt><a href="pgui_quickstart_createconfiguration.html">Create a configuration instance</a></dt><dt><a href="pgui_quickstart_createdatamodel.html">Create a data-model</a></dt><dt><a href="pgui_quickstart_gettemplate.html">Get the template</a></dt><dt><a href="pgui_quickstart_merge.html">Merging the template with the data-model</a></dt><dt><a href="pgui_quickstart_all.html">Putting all together</a></dt>    </dl></dd>
+<dt>2.    <a href="pgui_datamodel.html">The Data Model</a></dt>
+    <dd><dl>
+<dt><a href="pgui_datamodel_basics.html">Basics</a></dt><dt><a href="pgui_datamodel_scalar.html">Scalars</a></dt><dt><a href="pgui_datamodel_parent.html">Containers</a></dt><dt><a href="pgui_datamodel_method.html">Methods</a></dt><dt><a href="pgui_datamodel_directive.html">Directives</a></dt><dt><a href="pgui_datamodel_node.html">Node variables</a></dt><dt><a href="pgui_datamodel_objectWrapper.html">Object wrappers</a></dt>    </dl></dd>
+<dt>3.    <a href="pgui_config.html">The Configuration</a></dt>
+    <dd><dl>
+<dt><a href="pgui_config_basics.html">Basics</a></dt><dt><a href="pgui_config_sharedvariables.html">Shared variables</a></dt><dt><a href="pgui_config_settings.html">Settings</a></dt><dt><a href="pgui_config_templateloading.html">Template loading</a></dt><dt><a href="pgui_config_errorhandling.html">Error handling</a></dt>    </dl></dd>
+<dt>4.    <a href="pgui_misc.html">Miscellaneous</a></dt>
+    <dd><dl>
+<dt><a href="pgui_misc_var.html">Variables</a></dt><dt><a href="pgui_misc_charset.html">Charset issues</a></dt><dt><a href="pgui_misc_multithreading.html">Multithreading</a></dt><dt><a href="pgui_misc_beanwrapper.html">Bean wrapper</a></dt><dt><a href="pgui_misc_logging.html">Logging</a></dt><dt><a href="pgui_misc_servlet.html">Using FreeMarker with servlets</a></dt><dt><a href="pgui_misc_secureenv.html">Configuring security policy for FreeMarker</a></dt><dt><a href="pgui_misc_xml_legacy.html">Legacy XML wrapper implementation</a></dt><dt><a href="pgui_misc_ant.html">Using FreeMarker with Ant</a></dt><dt><a href="pgui_misc_jythonwrapper.html">Jython wrapper</a></dt>    </dl></dd>
+   </dl></dd>
+   <dt>III.
+   <a href="xgui.html">XML Processing Guide</a>
+   <dd><dl>
+<dt>1.    <a href="xgui_preface.html">Preface</a></dt>
+<dt>2.    <a href="xgui_expose.html">Exposing XML documents</a></dt>
+    <dd><dl>
+<dt><a href="xgui_expose_dom.html">The DOM tree</a></dt><dt><a href="xgui_expose_put.html">Putting the XML into the data-model</a></dt>    </dl></dd>
+<dt>3.    <a href="xgui_imperative.html">Imperative XML processing</a></dt>
+    <dd><dl>
+<dt><a href="xgui_imperative_learn.html">Learning by example</a></dt><dt><a href="xgui_imperative_formal.html">Formal description</a></dt>    </dl></dd>
+<dt>4.    <a href="xgui_declarative.html">Declarative XML Processing</a></dt>
+    <dd><dl>
+<dt><a href="xgui_declarative_basics.html">Basics</a></dt><dt><a href="xgui_declarative_details.html">Details</a></dt>    </dl></dd>
+   </dl></dd>
+   <dt>IV.
+   <a href="ref.html">Reference</a>
+   <dd><dl>
+<dt>1.    <a href="ref_builtins.html">Built-in Reference</a></dt>
+    <dd><dl>
+<dt><a href="ref_builtins_string.html">Built-ins for strings</a></dt><dt><a href="ref_builtins_number.html">Built-ins for numbers</a></dt><dt><a href="ref_builtins_date.html">Built-ins for dates</a></dt><dt><a href="ref_builtins_boolean.html">Built-ins for booleans</a></dt><dt><a href="ref_builtins_sequence.html">Built-ins for sequences</a></dt><dt><a href="ref_builtins_hash.html">Built-ins for hashes</a></dt><dt><a href="ref_builtins_node.html">Built-ins for nodes (for XML)</a></dt><dt><a href="ref_builtins_expert.html">Seldom used and expert built-ins</a></dt>    </dl></dd>
+<dt>2.    <a href="ref_directives.html">Directive Reference</a></dt>
+    <dd><dl>
+<dt><a href="ref_directive_if.html">if, else, elseif</a></dt><dt><a href="ref_directive_switch.html">switch, case, default, break</a></dt><dt><a href="ref_directive_list.html">list, break</a></dt><dt><a href="ref_directive_include.html">include</a></dt><dt><a href="ref_directive_import.html">import</a></dt><dt><a href="ref_directive_noparse.html">noparse</a></dt><dt><a href="ref_directive_compress.html">compress</a></dt><dt><a href="ref_directive_escape.html">escape, noescape</a></dt><dt><a href="ref_directive_assign.html">assign</a></dt><dt><a href="ref_directive_global.html">global</a></dt><dt><a href="ref_directive_local.html">local</a></dt><dt><a href="ref_directive_setting.html">setting</a></dt><dt><a href="ref_directive_userDefined.html">User-defined directive (&lt;@...&gt;)</a></dt><dt><a href="ref_directive_macro.html">macro, nested, return</a></dt><dt><a href="ref_directive_function.html">function, return</a></dt><dt><a href="ref_directive_flush.html">flush</a></dt><dt><a href="ref_directive_stop.html">stop</a></dt><dt><a href="ref_directive_ftl.html">ftl</a></dt><dt><a href="ref_directive_t.html">t, lt, rt</a></dt><dt><a href="ref_directive_nt.html">nt</a></dt><dt><a href="ref_directive_attempt.html">attempt, recover</a></dt><dt><a href="ref_directive_visit.html">visit, recurse, fallback</a></dt>    </dl></dd>
+<dt>3.    <a href="ref_specvar.html">Special Variable Reference</a></dt>
+<dt>4.    <a href="ref_reservednames.html">Reserved names in FTL</a></dt>
+<dt>5.    <a href="ref_deprecated.html">Deprecated FTL constructs</a></dt>
+    <dd><dl>
+<dt><a href="ref_depr_directive.html">List of deprecated directives</a></dt><dt><a href="ref_depr_builtin.html">List of deprecated built-ins</a></dt><dt><a href="ref_depr_oldmacro.html">Old-style macro and call directives</a></dt><dt><a href="ref_depr_transform.html">Transform directive</a></dt><dt><a href="ref_depr_oldsyntax.html">Old FTL syntax</a></dt><dt><a href="ref_depr_numerical_interpolation.html">#{...}: Numerical interpolation</a></dt>    </dl></dd>
+   </dl></dd>
+   <dt>V.
+   <a href="app.html">Appendixes</a>
+   <dd><dl>
+<dt>A.    <a href="app_faq.html">FAQ</a></dt>
+<dt>B.    <a href="app_install.html">Installing FreeMarker</a></dt>
+<dt>C.    <a href="app_build.html">Building FreeMarker</a></dt>
+<dt>D.    <a href="app_versions.html">Versions</a></dt>
+    <dd><dl>
+<dt><a href="versions_2_3_15.html">2.3.15</a></dt><dt><a href="versions_2_3_14.html">2.3.14</a></dt><dt><a href="versions_2_3_13.html">2.3.13</a></dt><dt><a href="versions_2_3_12.html">2.3.12</a></dt><dt><a href="versions_2_3_11.html">2.3.11</a></dt><dt><a href="versions_2_3_10.html">2.3.10</a></dt><dt><a href="versions_2_3_9.html">2.3.9</a></dt><dt><a href="versions_2_3_8.html">2.3.8</a></dt><dt><a href="versions_2_3_7.html">2.3.7</a></dt><dt><a href="versions_2_3_7rc1.html">2.3.7 RC1</a></dt><dt><a href="versions_2_3_6.html">2.3.6</a></dt><dt><a href="versions_2_3_5.html">2.3.5</a></dt><dt><a href="versions_2_3_4.html">2.3.4</a></dt><dt><a href="versions_2_3_3.html">2.3.3</a></dt><dt><a href="versions_2_3_2.html">2.3.2</a></dt><dt><a href="versions_2_3_1.html">2.3.1</a></dt><dt><a href="versions_2_3.html">2.3</a></dt><dt><a href="versions_2_2_8.html">2.2.8</a></dt><dt><a href="versions_2_2_7.html">2.2.7</a></dt><dt><a href="versions_2_2_6.html">2.2.6</a></dt><dt><a href="versions_2_2_5.html">2.2.5</a></dt><dt><a href="versions_2_2_4.html">2.2.4</a></dt><dt><a href="versions_2_2_3.html">2.2.3</a></dt><dt><a href="versions_2_2_2.html">2.2.2</a></dt><dt><a href="versions_2_2_1.html">2.2.1</a></dt><dt><a href="versions_2_2.html">2.2</a></dt><dt><a href="versions_2_1_5.html">2.1.5</a></dt><dt><a href="versions_2_1_4.html">2.1.4</a></dt><dt><a href="versions_2_1_3.html">2.1.3</a></dt><dt><a href="versions_2_1_2.html">2.1.2</a></dt><dt><a href="versions_2_1_1.html">2.1.1</a></dt><dt><a href="versions_2_1.html">2.1</a></dt><dt><a href="versions_2_01.html">2.01</a></dt><dt><a href="versions_2_0.html">2.0</a></dt><dt><a href="versions_2_0RC3.html">2.0 RC3</a></dt><dt><a href="versions_2_0RC2.html">2.0 RC2</a></dt><dt><a href="versions_2_0RC1.html">2.0 RC1</a></dt>    </dl></dd>
+<dt>E.    <a href="app_license.html">License</a></dt>
+   </dl></dd>
+  
+   <dt><a href="gloss.html">Glossary</a>
+   <dd>
+   <dt><a href="alphaidx.html">Index</a>
+   <dd>
+  </dl>
+ </div>
+</div>
+
+</div>
+<br>
+
+<table class="navigation" cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#E0E0E0">
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+    <tr>
+        <td align="left" valign="middle">
+            <table cellspacing="0" cellpadding="4" width="100%" border="0" bgcolor="#E0E0E0">
+                <tr>
+                    <td align="left"><img border="0" hspace="0" vspace="0" alt="Prev" src="images/nav/prev_disabled.gif"><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><img border="0" hspace="0" vspace="0" alt="Up" src="images/nav/up_disabled.gif"><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="n" href="preface.html"><img border="0" hspace="0" vspace="0" alt="Next" src="images/nav/next.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+                    <td align="right" valign="middle">
+                        <span style="font-size: 16px; font-family: Arial, sans-serif">Bookmarks:
+                        <a accesskey="h" href="index.html">Full ToC</a>, <a accesskey="i" href="alphaidx.html">Index</a>,
+                        <a accesskey="g" href="gloss.html">Glossary</a>,
+                        <a href="ref.html">Reference</a>,
+                        <a href="app_faq.html">FAQ</a>
+                        | External:
+                        <a href="api/index.html">API</a>,
+                        <a href="../index.html">Home</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+</table><table border=0 cellspacing=0 cellpadding=0 width="100%">
+  <tr>
+    <td colspan=2><img src="images/none.gif" width=1 height=4 alt=""></td>
+  <tr>
+    <td align="left" valign="top"><span class="footnote">
+        Page generated: 2008-12-16 13:58:40 GMT
+    </span></td>
+    <td align="right" valign="top"><span class="footnote">
+        FreeMarker Manual -- 
+    For FreeMarker 2.3.15
+  
+    </span></td>
+  </tr>
+</table>
+</body>
+</html>

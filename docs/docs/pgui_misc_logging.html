@@ -1,0 +1,149 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <link rel="stylesheet" href="fmdoc.css" type="text/css">
+  <meta name="generator" content="FreeMarker-based XDocBook Stylesheet">
+  <title>FreeMarker Manual - Logging</title>
+</head>
+<body>
+
+<table class="navigation" cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#E0E0E0">
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+    <tr>
+        <td align="left" valign="middle">
+            <table cellspacing="0" cellpadding="4" width="100%" border="0" bgcolor="#E0E0E0">
+                <tr>
+                    <td align="left"><a accesskey="p" href="pgui_misc_beanwrapper.html"><img border="0" hspace="0" vspace="0" alt="Prev" src="images/nav/prev.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="u" href="pgui_misc.html"><img border="0" hspace="0" vspace="0" alt="Up" src="images/nav/up.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="n" href="pgui_misc_servlet.html"><img border="0" hspace="0" vspace="0" alt="Next" src="images/nav/next.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+                    <td align="right" valign="middle">
+                        <span style="font-size: 16px; font-family: Arial, sans-serif">Bookmarks:
+                        <a accesskey="h" href="index.html">Full ToC</a>, <a accesskey="i" href="alphaidx.html">Index</a>,
+                        <a accesskey="g" href="gloss.html">Glossary</a>,
+                        <a href="ref.html">Reference</a>,
+                        <a href="app_faq.html">FAQ</a>
+                        | External:
+                        <a href="api/index.html">API</a>,
+                        <a href="../index.html">Home</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+</table><div id="mainContent">
+<div class="sect1">
+
+
+
+
+
+
+<div class="titlepage">
+   <div>
+     <h2><a name="pgui_misc_logging"></a>Logging</h2>
+   </div>
+</div>        
+
+
+
+
+
+
+<p>FreeMarker integrates with the following logging packages: <a href="http://jakarta.apache.org/log4j">Log4J</a>, <a href="http://jakarta.apache.org/avalon/logkit">Avalon LogKit</a>, and <a href="http://java.sun.com/j2se/1.4/docs/api/java/util/logging/package-summary.html">java.util.logging</a> (Java2 platform 1.4 and above). You need not do anything in order for FreeMarker to use these loggers; if any of them is discovered through the class loader that loaded FreeMarker classes, it is used automatically. All log messages produced by FreeMarker are logged into the logger hierarchy whose top-level logger is named <tt style="color: #A03D10">freemarker</tt>. Currently used loggers are:</p>
+
+   <div class="informaltable">
+      <table border="1" cellpadding="4">
+
+  
+       <thead>
+        <tr>
+        <th align="left">Logger name</th>
+
+        <th align="left">Purpose</th>
+
+      </tr>  
+
+    </thead>
+
+      <tbody>
+        <tr><td align="left"><tt style="color: #A03D10">freemarker.beans</tt></td>
+<td align="left">Logs messages of the Beans wrapper module.</td>
+</tr>  
+
+        <tr><td align="left"><tt style="color: #A03D10">freemarker.cache</tt></td>
+<td align="left">Logs messages related to template loading and caching.</td>
+</tr>  
+
+        <tr><td align="left"><tt style="color: #A03D10">freemarker.runtime</tt></td>
+<td align="left">Logs template exceptions thrown during template processing.</td>
+</tr>  
+
+        <tr><td align="left"><tt style="color: #A03D10">freemarker.servlet</tt></td>
+<td align="left">Logs messages of the FreemarkerServlet class.</td>
+</tr>  
+
+    </tbody>
+
+  
+      </table>
+   </div>
+
+
+<p>FreeMarker will look for the logging packages in this order, and will use the first package it finds: Log4J, Avalon, java.util.logging. However, if you call the static <tt style="color: #A03D10">selectLoggerLibrary</tt> method on the <tt style="color: #A03D10">freemarker.log.Logger</tt> class with appropriate parameter, you can explicitly select a logger package, or even disable the logging.</p>
+
+<p>You can also call the static <tt style="color: #A03D10">selectLoggerLibrary</tt> method on the <tt style="color: #A03D10">freemarker.log.Logger</tt> class and pass it a string that will be used to prefix the above mentioned logger names. This is useful if you want to have separate loggers on a per-application basis.</p>
+
+</div>
+
+</div>
+<br>
+
+<table class="navigation" cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#E0E0E0">
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+    <tr>
+        <td align="left" valign="middle">
+            <table cellspacing="0" cellpadding="4" width="100%" border="0" bgcolor="#E0E0E0">
+                <tr>
+                    <td align="left"><a accesskey="p" href="pgui_misc_beanwrapper.html"><img border="0" hspace="0" vspace="0" alt="Prev" src="images/nav/prev.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="u" href="pgui_misc.html"><img border="0" hspace="0" vspace="0" alt="Up" src="images/nav/up.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="n" href="pgui_misc_servlet.html"><img border="0" hspace="0" vspace="0" alt="Next" src="images/nav/next.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+                    <td align="right" valign="middle">
+                        <span style="font-size: 16px; font-family: Arial, sans-serif">Bookmarks:
+                        <a accesskey="h" href="index.html">Full ToC</a>, <a accesskey="i" href="alphaidx.html">Index</a>,
+                        <a accesskey="g" href="gloss.html">Glossary</a>,
+                        <a href="ref.html">Reference</a>,
+                        <a href="app_faq.html">FAQ</a>
+                        | External:
+                        <a href="api/index.html">API</a>,
+                        <a href="../index.html">Home</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+</table><table border=0 cellspacing=0 cellpadding=0 width="100%">
+  <tr>
+    <td colspan=2><img src="images/none.gif" width=1 height=4 alt=""></td>
+  <tr>
+    <td align="left" valign="top"><span class="footnote">
+        Page generated: 2008-12-16 13:58:40 GMT
+    </span></td>
+    <td align="right" valign="top"><span class="footnote">
+        FreeMarker Manual -- 
+    For FreeMarker 2.3.15
+  
+    </span></td>
+  </tr>
+</table>
+</body>
+</html>
+

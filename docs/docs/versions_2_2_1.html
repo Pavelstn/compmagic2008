@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <link rel="stylesheet" href="fmdoc.css" type="text/css">
+  <meta name="generator" content="FreeMarker-based XDocBook Stylesheet">
+  <title>FreeMarker Manual - 2.2.1</title>
+</head>
+<body>
+
+<table class="navigation" cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#E0E0E0">
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+    <tr>
+        <td align="left" valign="middle">
+            <table cellspacing="0" cellpadding="4" width="100%" border="0" bgcolor="#E0E0E0">
+                <tr>
+                    <td align="left"><a accesskey="p" href="versions_2_2_2.html"><img border="0" hspace="0" vspace="0" alt="Prev" src="images/nav/prev.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="u" href="app_versions.html"><img border="0" hspace="0" vspace="0" alt="Up" src="images/nav/up.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="n" href="versions_2_2.html"><img border="0" hspace="0" vspace="0" alt="Next" src="images/nav/next.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+                    <td align="right" valign="middle">
+                        <span style="font-size: 16px; font-family: Arial, sans-serif">Bookmarks:
+                        <a accesskey="h" href="index.html">Full ToC</a>, <a accesskey="i" href="alphaidx.html">Index</a>,
+                        <a accesskey="g" href="gloss.html">Glossary</a>,
+                        <a href="ref.html">Reference</a>,
+                        <a href="app_faq.html">FAQ</a>
+                        | External:
+                        <a href="api/index.html">API</a>,
+                        <a href="../index.html">Home</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+</table><div id="mainContent">
+<div class="sect1">
+
+
+
+<div class="titlepage">
+   <div>
+     <h2><a name="versions_2_2_1"></a>2.2.1</h2>
+   </div>
+</div>        
+
+
+
+<p>Date of release: 2003-04-11</p>
+
+<p>This version introduces important new features, such as the native FTL date/time type, and the auto-include and auto-import settings.</p>
+
+<p>The date/time support is experimental, but we hope it will not substantially change. We would like to label it as final ASAP, so we urge everybody to send feedback on this topic to the mailing lists.</p>
+
+
+<div class="titlepage">
+   <div>
+     <h3><a name="autoid_205"></a>Changes on the FTL side</h3>
+   </div>
+</div>        
+
+    <div class="itemizedlist">
+<ul>
+  <li><p>New scalar type: date. For more information read: <a href="dgui_datamodel_types.html#dgui_datamodel_scalar">Template Author's Guide/The Data Model/Scalar variables</a>, <a href="dgui_datamodel_types.html#dgui_datamodel_scalar">Template Author's Guide/The Data Model/Scalar variables</a>, <a href="dgui_template_valueinsertion.html#dgui_template_valueinserion_universal_date">interpolation</a>, <a href="ref_builtins_date.html#ref_builtin_string_for_date">?string built-in for dates</a></p></li>
+</ul>    </div>
+
+
+
+
+<div class="titlepage">
+   <div>
+     <h3><a name="autoid_206"></a>Changes on the Java side</h3>
+   </div>
+</div>        
+
+
+    <div class="itemizedlist">
+<ul>
+  <li><p>New <tt style="color: #A03D10">TemplateModel</tt> subinterface: <tt style="color: #A03D10">TemplateDateModel</tt>. For more information read <a href="pgui_datamodel_scalar.html">Template Author's Guide/The Data Model/Scalars</a></p></li>
+  <li><p>auto-include and auto-import: With these new configuration level settings, you can include and import commonly used templates (usually collection of macro definitions) at the top of all templates, without actually typing <tt style="color: #A03D10">&lt;#include <i style="color: #DD4400 ">...</i>&gt;</tt> or <tt style="color: #A03D10">&lt;#import <i style="color: #DD4400 ">...</i>&gt;</tt> into the templates again and again. For more information please read the Java API documentation of <tt style="color: #A03D10">Configuration</tt></p></li>
+  <li><p>New template method: <tt style="color: #A03D10">createProcessingEnvironment</tt>. This method makes it possible for you to do some special initialization on the <a href="gloss.html#gloss.environment"><tt>Environment</tt></a> before template processing, or to read the environment after template processing. For more information please read the Java API documentation.</p></li>
+  <li><p>Changes to <tt style="color: #A03D10">freemarker.ext.beans</tt> package: 
+    <tt style="color: #A03D10">BeanModel</tt>, <tt style="color: #A03D10">MapModel</tt>, and <tt style="color: #A03D10">ResourceModel</tt>
+    now implement <tt style="color: #A03D10">TemplateHashModelEx</tt>.</p></li>
+  <li><p>Bugfix: <tt style="color: #A03D10">Configurable.setSettings(Properties)</tt> didn't removed redundant spaces/tabs at the end of property values.</p></li>
+</ul>    </div>
+
+
+
+</div>
+
+</div>
+<br>
+
+<table class="navigation" cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#E0E0E0">
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+    <tr>
+        <td align="left" valign="middle">
+            <table cellspacing="0" cellpadding="4" width="100%" border="0" bgcolor="#E0E0E0">
+                <tr>
+                    <td align="left"><a accesskey="p" href="versions_2_2_2.html"><img border="0" hspace="0" vspace="0" alt="Prev" src="images/nav/prev.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="u" href="app_versions.html"><img border="0" hspace="0" vspace="0" alt="Up" src="images/nav/up.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"><a accesskey="n" href="versions_2_2.html"><img border="0" hspace="0" vspace="0" alt="Next" src="images/nav/next.gif"></a><img src="images/none.gif" width="4" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+                    <td align="right" valign="middle">
+                        <span style="font-size: 16px; font-family: Arial, sans-serif">Bookmarks:
+                        <a accesskey="h" href="index.html">Full ToC</a>, <a accesskey="i" href="alphaidx.html">Index</a>,
+                        <a accesskey="g" href="gloss.html">Glossary</a>,
+                        <a href="ref.html">Reference</a>,
+                        <a href="app_faq.html">FAQ</a>
+                        | External:
+                        <a href="api/index.html">API</a>,
+                        <a href="../index.html">Home</a>
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr valign="top">
+        <td height="1" bgcolor="black"><img src="images/none.gif" width="1" height="1" alt="" hspace="0" vspace="0" border="0"></td>
+    </tr>
+</table><table border=0 cellspacing=0 cellpadding=0 width="100%">
+  <tr>
+    <td colspan=2><img src="images/none.gif" width=1 height=4 alt=""></td>
+  <tr>
+    <td align="left" valign="top"><span class="footnote">
+        Page generated: 2008-12-16 13:58:40 GMT
+    </span></td>
+    <td align="right" valign="top"><span class="footnote">
+        FreeMarker Manual -- 
+    For FreeMarker 2.3.15
+  
+    </span></td>
+  </tr>
+</table>
+</body>
+</html>
+

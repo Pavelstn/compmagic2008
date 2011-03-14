@@ -1,0 +1,8 @@
+
+#headerwrap {background-image: url(../img/logo5.gif);background-repeat: no-repeat;height:100px;background-position: left;}
+h1.slogan1 {font-style: italic;font-family: 'Courier New',Courier,monospace; font-size: 1em;}
+#slogan1wrap {margin-left: -100%; width: 50%;height: 100px;}
+#slogan1 {clear: both;padding:0px;text-align: right;margin:-5px;}
+.link, #login {font-size: 1.2em;color: #ffffff;padding-left: 20px;padding-right: 30px; background-image: url(../img/login2.png);  text-decoration:none;}
+#slogan2wrap {margin-left: -50%;width: 50%;height: 100px;text-align: right;}
+#slogan2 {bottom: 6px;font-size: 18px;left: 1px;top: 0px;}

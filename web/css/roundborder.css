@@ -1,0 +1,99 @@
+.dialog_black {
+    /*width:67%;*/
+    width:100%;
+    margin:0px auto;
+    min-width:10em;
+    max-width:800px; /* I only cut the left background images out to 800px. You could do much larger, etc. */
+    color:#fff;
+    
+}
+
+.dialog_black .hd .c,
+.dialog_black .ft .c {
+    font-size:1px; /* ensure minimum height */
+    height:25px;
+}
+
+.dialog_black .ft .c {
+    height:25px;
+}
+
+.dialog_black .hd {
+    background:transparent url(../img/rounded/tl.png) no-repeat 0px 0px;
+    margin-right:25px; /* space for right corner */
+}
+
+.dialog_black .hd .c {
+    background:transparent url(../img/rounded/tr.png) no-repeat right 0px;
+    margin-right:-25px; /* pull right corner back over "empty" space (from above margin) */
+}
+
+.dialog_black .bd {
+    background:transparent url(../img/rounded/ml.png) repeat-y 0px 0px;
+    margin-right:25px;
+}
+
+.dialog_black .bd .c {
+    background:transparent url(../img/rounded/mr.png) repeat-y right 0px;
+    margin-right:-25px;
+}
+
+.dialog_black .bd .c .s {
+    margin:0px 8px 0px 4px;
+    background:#000 url(../img/rounded/ms.jpg) repeat-x 0px 0px;
+    padding:1em;
+}
+
+.dialog_black .ft {
+    background:transparent url(../img/rounded/bl.png) no-repeat 0px 0px;
+    margin-right:25px;
+}
+
+.dialog_black .ft .c {
+    background:transparent url(../img/rounded/br.png) no-repeat right 0px;
+    margin-right:-25px;
+}
+.c {
+    height: 100px;
+    margin-left:14px;
+}
+/* //////////////////////////////////////////////////////////////////// */
+.b1, .b2, .b3, .b4, .b5,
+.b1 i, .b2 i, .b3 i, .b4 i, .b5 i,
+.b1 b, .b2 b, .b3 b, .b4 b, .b5 b,
+.b1 q, .b2 q, .b3 q, .b4 q, .b5 q {
+  height: 1px;
+  font-size: 1px;
+  overflow: hidden;
+  border-style: solid;
+  border-width: 0 1px;
+  display: block;
+  background:#000 url(../img/rounded/ms.png)repeat-y right 0px;
+}
+.b1 {
+  margin: 0 2px;
+  background: #EBEEF0;
+  border: none;
+}
+.b1 b {
+ margin: 0 1px;
+ background: #B8C3C8;
+ border-color: #CBD3D7;
+}
+.b2 {margin: 0 1px; border-color: #D6DCDF;}
+.b2 b {border-color: #B8C3C8;}
+.b2 i {border-color: #E4E8EA;}
+.b2 q {border-color: #F7F8F9;}
+.b3 {border-color: #EBEEEF;}
+.b3 b {border-color: #BCC6CB;}
+.b3 i {border-color: #F9FAFB;}
+.b4 {border-color: #CAD2D6;}
+.b4 b {border-color: #E5E9EB;}
+.b5 {border-color: #B5C0C6;}
+.b5 b {border-color: #FAFBFB;}
+.text {
+  border: 1px solid #B0BCC2;
+  border-width: 0 1px;
+  padding: 0 12px;
+  background:#000 url(../img/rounded/ms.png);
+}
